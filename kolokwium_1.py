@@ -15,3 +15,4 @@ kurs = Kurs('Kowalski Jan', 'Katowice, ul. Długa 5', 'Łódź, ul. Kościuszki 
             800)
 
 print(kurs)
+
