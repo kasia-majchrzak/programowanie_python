@@ -12,6 +12,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 def read_text_from_file(file_path: str):
     if exists(file_path):
         img = cv2.imread(file_path)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         print(f'Extracted text from file {file_path}: \n {pytesseract.image_to_string(img)}\n')
     else:
         print(f'File {file_path} not found')
