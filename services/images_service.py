@@ -9,7 +9,7 @@ def getImagesInDir(dir_path: str) -> list:
         if ext.lower() not in [".jpg", ".png"]:
             continue
         else:
-            img = cv2.imread(os.path.join("images", filename))
+            img = cv2.imread(os.path.join("../images", filename))
             images.append(img)
 
     return images

@@ -1,7 +1,6 @@
-from person_detector_service import detect
-import images_service as imgService
+from services.person_detector_service import detect
+from services.images_service import getImagesInDir
 
-
-images = imgService.getImagesInDir("images")
+images = getImagesInDir("images")
 for img in images:
     img = detect(img)
